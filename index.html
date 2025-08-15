@@ -1,11 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-    <h1>Moi</h1>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">Tietoja minusta</a></li>
+                <li><a href="#projects">Projektit</a></li>
+                <li><a href="#contact">Yhteystiedot</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h1>Mico Mattila</h1>
+        <h5>Learning Software Developer</h5>
+        <p>Olen ohjelmistokehittäjä joka opiskelee HTML:ää, CSS:ää ja Javascriptiä. Tässä on muutama projekti, joita olen tehnyt.</p>
+    </section>
+
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2 class="display-5 fw-bold mb-4">Projektit</h2>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card">
+                        <img src="Marjatila.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Ohimaan Marjatila</h5>
+                            <p class="card-text">Olen tuottanut itsenäisesti laadukkaat verkkosivut Ohimaan Marjatilalle, sivut koostuivat etusivusta, tilaussivusta ja Yhteystiedot-sivusta.</p>
+                            <a href="#" class="btn btn-outline-dark">Käy kurkkaamassa!</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card">
+                        <img src="Leirikeskus.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Leirikeskus</h5>
+                            <p class="card-text">Olen tuottanut itsenäisesti laadukkaat verkkosivut Leirikeskukselle, sivut koostuivat etusivusta, tilaussivusta ja Yhteystiedot-sivusta.</p>
+                            <a href="#" class="btn btn-outline-dark">Käy kurkkaamassa!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        </div>
+    </div>
+
+    <section id="contact">
+        <div class="container">
+        <h2 class="display-5 fw-bold mb-4">Yhteystiedot</h2>
+        <p>Voit ottaa yhteyttä minuun sähköpostilla: <a>Mico.mattila@edu.tampere.fi</a></p>
+        <p>Jos sinua kiinnostaa käydä katsomassa minun github työni:</p><a href="https://github.com/tredu/html-ja-css-Miso08">Html & Css!</a>
+        <a href="https://github.com/tredu/johdatusohjelmointiin-osa-1-Miso08">JavaScript!</a>
+    </div>
+    </section>
+
+   
 </body>
 </html>
