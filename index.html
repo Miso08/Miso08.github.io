@@ -1,81 +1,240 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="portfolio.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Portfolio" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/fa62c117c7.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Mico Mattila</title>
+  </head>
+  <body class="light" id="top">
+    <svg style="display: none" aria-hidden="true">
+      <symbol id="icon-github" viewBox="0 0 16 16">
+        <path
+          d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+        />
+      </symbol>
+      <symbol id="icon-linkedin" viewBox="0 0 16 16">
+        <path
+          d="M14.816 0H1.18C.528 0 0 .516 0 1.153v13.694C0 15.484.528 16 1.18 16h13.635c.652 0 1.185-.516 1.185-1.153V1.153C16 .516 15.467 0 14.816 0zM4.744 13.635H2.372V5.996h2.372v7.639zM3.558 4.958c-.762 0-1.377-.617-1.377-1.377 0-.761.615-1.378 1.377-1.378.759 0 1.377.617 1.377 1.378 0 .76-.618 1.377-1.377 1.377zM13.635 13.635h-2.371V9.921c0-.886-.017-2.028-1.236-2.028-1.238 0-1.428.966-1.428 1.964v3.778H6.229V5.996h2.277v1.043h.032c.317-.601 1.09-1.235 2.246-1.235 2.401 0 2.851 1.582 2.851 3.637v4.194z"
+        />
+      </symbol>
+    </svg>
 
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#about">Tietoja minusta</a></li>
-                <li><a href="#projects">Projektit</a></li>
-                <li><a href="#contact">Yhteystiedot</a></li>
-            </ul>
-        </nav>
+    <header class="header center">
+      <a
+        href="https://github.com/Miso08"
+        aria-label="GitHub"
+        class="link link--icon"
+      >
+        <svg aria-hidden="true" class="icon icon--github"><use href="#icon-github"></use></svg>
+      </a>
+
+      <nav class="nav center">
+        <ul class="nav__list center">
+          <li class="nav__list-item">
+            <a class="link link--nav" href="#projects">Projektit</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="link link--nav" href="#skills">Taidot</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="link link--nav" href="#contact">Yhteystiedot</a>
+          </li>
+        </ul>
+
+        <button type="button" aria-label="toggle theme" class="btn btn--icon">
+          <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
+        </button>
+
+        <button
+          type="button"
+          aria-label="toggle navigation"
+          class="btn btn--icon nav__hamburger"
+        >
+          <i aria-hidden="true" class="fas fa-bars"></i>
+        </button>
+      </nav>
     </header>
 
-    <section id="about">
-        <h1>Mico Mattila</h1>
-        <h5>Learning Software Developer</h5>
-        <p>Olen ohjelmistokehittäjä joka opiskelee HTML:ää,PHP;tä, CSS:ää ja Javascriptiä. Tässä on muutama projekti, joita olen tehnyt.</p>
-    </section>
+    <main>
+      <!-- About -->
+      <div class="about center">
+        <h1>Hei, Olen <span class="about__name">Mico Mattila.</span></h1>
+        <h2 class="about__role">Opiskeleva <span class="about__role--highlight">Ohjelmistokehittäjä.</span></h2>
+        <p class="about__desc">
+          Olen Mico Mattila, opiskeleva ohjelmistokehittäjä. Olen kiinnostunut web-kehityksestä ja ohjelmoinnista. Tavoitteeni on kehittää taitojani ja työskennellä mielenkiintoisissa projekteissa.
+        </p>
 
-    <section class="projects" id="projects">
-        <div class="container">
-            <h2 class="display-5 fw-bold mb-4">Projektit</h2>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card">
-                        <img src="Marjatila.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold">Ohimaan Marjatila</h5>
-                            <p class="card-text">Olen tuottanut itsenäisesti laadukkaat verkkosivut Ohimaan Marjatilalle, sivut koostuivat etusivusta, tilaussivusta ja Yhteystiedot-sivusta.</p>
-                            <a href="#" class="btn btn-outline-dark">Käy kurkkaamassa!</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card">
-                        <img src="Leirikeskus.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold">Leirikeskus</h5>
-                            <p class="card-text">Olen tuottanut itsenäisesti laadukkaat verkkosivut Leirikeskukselle, sivut koostuivat etusivusta, tilaussivusta ja Yhteystiedot-sivusta.</p>
-                            <a href="#" class="btn btn-outline-dark">Käy kurkkaamassa!</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card">
-                        <img src="fanikauppa.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold">Fanikauppa</h5>
-                            <p class="card-text">Olen tuottanut itsenäisesti laadukkaat verkkosivut Fanikaupalle, sivut koostuivat etusivusta, tilaussivusta ja Yhteystiedot-sivusta.</p>
-                            <a href="/fanikauppa/" class="btn btn-outline-dark">Käy kurkkaamassa!</a>
-                        </div>
-                    </div>
-                </div>
+        <div class="about__contact center">
+          <a href="https://example.com">
+            <span class="btn btn--outline">Ansioluettelo</span>
+          </a>
+
+          <a
+            href="https://github.com/Miso08"
+            aria-label="github"
+            class="link link--icon"
+          >
+            <svg aria-hidden="true" class="icon icon--github"><use href="#icon-github"></use></svg>
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/mico-mattila-259927341/"
+            aria-label="linkedin"
+            class="link link--icon"
+          >
+            <svg aria-hidden="true" class="icon icon--linkedin"><use href="#icon-linkedin"></use></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Projects -->
+      <section id="projects" class="section projects">
+        <h2 class="section__title">Projektit</h2>
+
+        <div class="projects__grid">
+          <div class="project">
+            <div class="project__icon" aria-hidden="true">
+              <i class="fas fa-ticket-alt"></i>
             </div>
+            <h3>Keikka Info</h3>
+            <p class="project__description">
+              Keikkojen ja konserttien listaussivusto. React-frontend ja
+              PHP/MySQL-backend, julkaistuna osoitteessa
+              keikkainfo.micmat24.treok.io.
+            </p>
+            <ul class="project__stack">
+              <li class="project__stack-item">React</li>
+              <li class="project__stack-item">PHP</li>
+              <li class="project__stack-item">MySQL</li>
+            </ul>
+
+            <div class="project__links">
+              <a
+                href="https://keikkainfo.micmat24.treok.io"
+                target="_blank"
+                rel="noopener"
+                class="btn btn--outline btn--small"
+              >
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+                Live-demo
+              </a>
+              
+            </div>
+          </div>
+
+          <div class="project">
+            <div class="project__icon" aria-hidden="true">
+              <i class="fas fa-shirt"></i>
+            </div>
+            <h3>Fanikauppa</h3>
+            <p class="project__description">
+              Fanituotekauppa käyttäjätunnistautumisella. React-frontend,
+              Express/Knex-backend ja MySQL-tietokanta.
+            </p>
+            <ul class="project__stack">
+              <li class="project__stack-item">React</li>
+              <li class="project__stack-item">Express</li>
+              <li class="project__stack-item">MySQL</li>
+            </ul>
+
+            <div class="project__links">
+              <a
+                href="https://miso08.github.io/fanikauppa/"
+                target="_blank"
+                rel="noopener"
+                class="btn btn--outline btn--small"
+              >
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+                Live-demo
+              </a>
+             
+            </div>
+          </div>
+
+          <div class="project">
+            <div class="project__icon" aria-hidden="true">
+              <i class="fas fa-question-circle"></i>
+            </div>
+            <h3>Tietovisa</h3>
+            <p class="project__description">
+              Tietovisasovellus, joka tukee sekä kirjautuneita käyttäjiä että
+              vierailijoita. React-frontend ja PHP/MySQL-backend.
+            </p>
+            <ul class="project__stack">
+              <li class="project__stack-item">React</li>
+              <li class="project__stack-item">PHP</li>
+              <li class="project__stack-item">MySQL</li>
+            </ul>
+
+            <div class="project__links">
+              <a
+                href="https://tietovisuli.micmat24.treok.io/"
+                target="_blank"
+                rel="noopener"
+                class="btn btn--outline btn--small"
+              >
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+                Live-demo
+              </a>
+             
+            </div>
+          </div>
         </div>
-    </section>
-        </div>
+      </section>
+
+      <!-- Skills -->
+      <section class="section skills" id="skills">
+        <h2 class="section__title">Skills</h2>
+        <ul class="skills__list">
+          <li class="skills__list-item btn btn--plain">HTML</li>
+          <li class="skills__list-item btn btn--plain">CSS</li>
+          <li class="skills__list-item btn btn--plain">SCSS</li>
+          <li class="skills__list-item btn btn--plain">JavaScript</li>
+          <li class="skills__list-item btn btn--plain">PHP</li>
+          <li class="skills__list-item btn btn--plain">WordPress</li>
+          <li class="skills__list-item btn btn--plain">React</li>
+          <li class="skills__list-item btn btn--plain">Git</li>
+          <li class="skills__list-item btn btn--plain">Unity</li>
+        </ul>
+      </section>
+
+      <!-- Contact -->
+      <section class="section contact center" id="contact">
+        <h2 class="section__title">Yhteystiedot</h2>
+        <a href="mailto:mattila.mico08@gmail.com">
+          <span class="btn btn--outline">Ota yhteyttä</span>
+        </a>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a
+        
+      >
+        2026 &copy; Mico Mattila
+      </a>
+    </footer>
+
+    <div class="scroll-container">
+      <div class="scroll-top">
+        <a aria-label="Scroll up" href="#top">
+          <i aria-hidden="true" class="fas fa-arrow-up"></i>
+        </a>
+      </div>
     </div>
 
-    <section id="contact">
-        <div class="container">
-        <h2 class="display-5 fw-bold mb-4">Yhteystiedot</h2>
-        <p>Voit ottaa yhteyttä minuun sähköpostilla: <a>Mico.mattila@edu.tampere.fi</a></p>
-        <p>Jos sinua kiinnostaa käydä katsomassa minun github työni:</p><a href="https://github.com/tredu/html-ja-css-Miso08">Html & Css!</a>
-        <a href="https://github.com/tredu/johdatusohjelmointiin-osa-1-Miso08">JavaScript!</a>
-    </div>
-    </section>
-
-   
-</body>
+    <script src="./script.js"></script>
+  </body>
 </html>
