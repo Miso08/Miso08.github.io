@@ -315,7 +315,7 @@ main {
 
 .project {
   position: relative;
-  padding: 2.2em 2em 2em;
+  padding: 0 2em 2em;
   margin: 0 auto;
   text-align: center;
   box-shadow: var(--shadow);
@@ -335,10 +335,19 @@ main {
   right: 0;
   height: 4px;
   background-color: var(--clr-primary);
+  z-index: 2;
 }
 
 .project:hover {
   transform: translateY(-7px);
+}
+
+.project__image {
+  width: calc(100% + 4em);
+  margin: 0 -2em;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top;
 }
 
 .project__icon {
@@ -351,6 +360,7 @@ main {
   background-color: var(--clr-bg);
   color: var(--clr-primary);
   font-size: 1.3rem;
+  margin-top: 1.4em;
   margin-bottom: 0.8em;
 }
 
@@ -383,6 +393,20 @@ main {
   gap: 1em;
   margin-top: auto;
   padding-top: 1em;
+}
+
+.skills__group {
+  max-width: 600px;
+  margin: 0 auto 2em;
+  text-align: center;
+}
+
+.skills__group-title {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  color: var(--clr-primary);
+  margin-bottom: 0.8em;
 }
 
 .skills__list {

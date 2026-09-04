@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Portfolio" />
+    <meta name="description" content="Mico Mattilan portfolio - opiskeleva full-stack-kehittäjä" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -73,20 +73,12 @@
         <h1>Hei, Olen <span class="about__name">Mico Mattila.</span></h1>
         <h2 class="about__role">Opiskeleva <span class="about__role--highlight">Ohjelmistokehittäjä.</span></h2>
         <p class="about__desc">
-          Olen Mico Mattila, opiskeleva ohjelmistokehittäjä. Olen kiinnostunut web-kehityksestä ja ohjelmoinnista. Tavoitteeni on kehittää taitojani ja työskennellä mielenkiintoisissa projekteissa.
+          Olen Mico Mattila, opiskeleva full-stack-kehittäjä. Tällä hetkellä opiskelen ohjelmistokehitystä Tampereen seudeun ammattikoulussa, sekkä Metropolian ammattikorkeakoulussa. Olen kiinnostunut erityisesti web-kehityksestä, ja olen toteuttanut useita projekteja, joissa olen käyttänyt mm. Reactia, PHP:tä ja MySQL:ää.
         </p>
 
         <div class="about__contact center">
-          <a href="https://acrobat.adobe.com/id/urn:aaid:sc:EU:15045498-0a87-4d50-8934-36156571a5b4">
+          <a href="cv.pdf">
             <span class="btn btn--outline">Ansioluettelo</span>
-          </a>
-
-          <a
-            href="https://github.com/Miso08"
-            aria-label="github"
-            class="link link--icon"
-          >
-            <svg aria-hidden="true" class="icon icon--github"><use href="#icon-github"></use></svg>
           </a>
 
           <a
@@ -105,14 +97,19 @@
 
         <div class="projects__grid">
           <div class="project">
+            <img
+              class="project__image"
+              src="images/keikka-info.jpg"
+              alt="Keikka Info -sivuston näkymä, jossa listataan tulevia keikkoja suodattimineen"
+              loading="lazy"
+            />
             <div class="project__icon" aria-hidden="true">
               <i class="fas fa-ticket-alt"></i>
             </div>
             <h3>Keikka Info</h3>
             <p class="project__description">
               Keikkojen ja konserttien listaussivusto. React-frontend ja
-              PHP/MySQL-backend, julkaistuna osoitteessa
-              
+              PHP/MySQL-backend REST-rajapinnan kautta.
             </p>
             <ul class="project__stack">
               <li class="project__stack-item">React</li>
@@ -130,18 +127,23 @@
                 <i aria-hidden="true" class="fas fa-external-link-alt"></i>
                 Live-demo
               </a>
-              
             </div>
           </div>
 
           <div class="project">
+            <img
+              class="project__image"
+              src="images/fanikauppa.jpg"
+              alt="Fanikauppa-verkkokaupan tuotenäkymä bändipaidoista"
+              loading="lazy"
+            />
             <div class="project__icon" aria-hidden="true">
               <i class="fas fa-shirt"></i>
             </div>
             <h3>Fanikauppa</h3>
             <p class="project__description">
               Fanituotekauppa käyttäjätunnistautumisella. React-frontend,
-              Express/Knex-backend ja MySQL-tietokanta.
+              Express/Knex-backend.
             </p>
             <ul class="project__stack">
               <li class="project__stack-item">React</li>
@@ -159,18 +161,23 @@
                 <i aria-hidden="true" class="fas fa-external-link-alt"></i>
                 Live-demo
               </a>
-             
             </div>
           </div>
 
           <div class="project">
+            <img
+              class="project__image"
+              src="images/tietovisa.jpg"
+              alt="TietoVisuli-tietovisasovelluksen etusivu ja esimerkkikysymys"
+              loading="lazy"
+            />
             <div class="project__icon" aria-hidden="true">
               <i class="fas fa-question-circle"></i>
             </div>
             <h3>Tietovisa</h3>
             <p class="project__description">
-              Tietovisasovellus, joka tukee sekä kirjautuneita käyttäjiä että
-              vierailijoita. React-frontend ja PHP/MySQL-backend.
+              Tietovisasovellus kirjautuneille käyttäjille ja vierailijoille.
+              React-frontend ja PHP/MySQL-backend.
             </p>
             <ul class="project__stack">
               <li class="project__stack-item">React</li>
@@ -188,7 +195,6 @@
                 <i aria-hidden="true" class="fas fa-external-link-alt"></i>
                 Live-demo
               </a>
-             
             </div>
           </div>
         </div>
@@ -197,17 +203,36 @@
       <!-- Skills -->
       <section class="section skills" id="skills">
         <h2 class="section__title">Osaamiset</h2>
-        <ul class="skills__list">
-          <li class="skills__list-item btn btn--plain">HTML</li>
-          <li class="skills__list-item btn btn--plain">CSS</li>
-          <li class="skills__list-item btn btn--plain">SCSS</li>
-          <li class="skills__list-item btn btn--plain">JavaScript</li>
-          <li class="skills__list-item btn btn--plain">PHP</li>
-          <li class="skills__list-item btn btn--plain">WordPress</li>
-          <li class="skills__list-item btn btn--plain">React</li>
-          <li class="skills__list-item btn btn--plain">Git</li>
-          <li class="skills__list-item btn btn--plain">Unity</li>
-        </ul>
+
+        <div class="skills__group">
+          <h4 class="skills__group-title">Frontend</h4>
+          <ul class="skills__list">
+            <li class="skills__list-item btn btn--plain">HTML</li>
+            <li class="skills__list-item btn btn--plain">CSS</li>
+            <li class="skills__list-item btn btn--plain">SCSS</li>
+            <li class="skills__list-item btn btn--plain">JavaScript</li>
+            <li class="skills__list-item btn btn--plain">React</li>
+          </ul>
+        </div>
+
+        <div class="skills__group">
+          <h4 class="skills__group-title">Backend</h4>
+          <ul class="skills__list">
+            <li class="skills__list-item btn btn--plain">PHP</li>
+            <li class="skills__list-item btn btn--plain">Node.js / Express</li>
+            <li class="skills__list-item btn btn--plain">MySQL</li>
+            <li class="skills__list-item btn btn--plain">SQLite</li>
+          </ul>
+        </div>
+
+        <div class="skills__group">
+          <h4 class="skills__group-title">Muut</h4>
+          <ul class="skills__list">
+            <li class="skills__list-item btn btn--plain">WordPress</li>
+            <li class="skills__list-item btn btn--plain">Git</li>
+            <li class="skills__list-item btn btn--plain">Unity</li>
+          </ul>
+        </div>
       </section>
 
       <!-- Contact -->
@@ -220,9 +245,7 @@
     </main>
 
     <footer class="footer">
-      <a
-        
-      >
+      <a>
         2026 &copy; Mico Mattila
       </a>
     </footer>
